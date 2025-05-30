@@ -216,6 +216,7 @@ class SAM2AutomaticMaskGenerator:
                 "point_coords": [mask_data["points"][idx].tolist()],
                 "stability_score": mask_data["stability_score"][idx].item(),
                 "crop_box": box_xyxy_to_xywh(mask_data["crop_boxes"][idx]).tolist(),
+                "low_res": mask_data["low_res_masks"][idx],
             }
             curr_anns.append(ann)
 
